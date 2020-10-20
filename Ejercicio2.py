@@ -10,4 +10,3 @@ def mas_larga(lista):
 
 palabraMax = mas_larga(listaPalabras)
 print(f"La palabra más larga de la lista es: {palabraMax}")
-

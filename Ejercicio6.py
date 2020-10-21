@@ -1,18 +1,12 @@
 ano = int(input("Introduza el año en curso: "))
-lista = []
+diccionario = {}
 
 for i in range(3):
     nombre = input("Introduzca su nombre: ")
-    anoNacimiento = input("Introduzca año de nacimiento: ")
-    lista.extend([nombre, anoNacimiento])
+    anoNacimiento = int(input("Introduzca año de nacimiento: "))
+    diccionario[nombre] = anoNacimiento
 
-indiceNombre = 0
-indiceAños = 1
-
-while indiceNombre < len(lista):
-    nombre = lista[indiceNombre]
-    anoNac = int(lista[indiceAños])
+for nombre, anoNac in diccionario.items():
     edad = ano - anoNac
     print(f"{nombre} tiene {edad} años")
-    indiceAños += 2
-    indiceNombre += 2
+
